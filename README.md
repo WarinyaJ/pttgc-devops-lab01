@@ -47,7 +47,7 @@ git push
 ```yaml
 jobs:
     lab-job:
-        run-ons: ubuntu-latest
+        runs-on: ubuntu-latest
         steps:
             - name: Start job
               run: echo 'Hello DevOps'
@@ -59,14 +59,14 @@ jobs:
 ```yaml
 jobs:
     lab-job:
-        run-ons: ubuntu-latest
+        runs-on: ubuntu-latest
         steps:
             - name: Start job
               run: echo 'Hello DevOps'
             - name: Second Step
               run: echo 'This is second step'
     second-job:
-        run-ons: ubuntu-latest
+        runs-on: ubuntu-latest
         steps:
             - name: Start Second job
               run: echo 'Hello Second Job'
@@ -79,14 +79,14 @@ jobs:
 ```yaml
 jobs:
     lab-job:
-        run-ons: ubuntu-latest
+        runs-on: ubuntu-latest
         steps:
             - name: Start job
               run: echo 'Hello DevOps'
             - name: Second Step
               run: echo 'This is second step'
     second-job:
-        run-ons: ubuntu-latest
+        runs-on: ubuntu-latest
         needs: lab-job
         steps:
             - name: Start Second job
@@ -104,7 +104,7 @@ on:
         - "main"
 jobs:
     prepare:
-        run-ons: ubuntu-latest
+        runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
             - uses: actions/setup-dotnet@v2
