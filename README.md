@@ -28,7 +28,7 @@ on:
 ```yaml
 jobs:
     lab-job:
-        run-ons: ubuntu-latest
+        runs-on: ubuntu-latest
         steps:
             - name: Start job
               run: echo 'Hello DevOps'   
